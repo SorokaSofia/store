@@ -17,23 +17,14 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DB_NAME = os.environ.get('DB_NAME')
-DB_USER = os.environ.get('DB_USER')
-DB_PASSWORD = os.environ.get('DB_PASSWORD')
-DB_HOST = os.environ.get('DB_HOST')
-DB_PORT = os.environ.get('DB_PORT')
-ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOST_HEROKU"), "*"]
+ALLOWED_HOSTS = ['djangoprojec-5b10cbb61607.herokuapp.com', '127.0.0.1']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-
-
 
 # Application definition
 
@@ -52,7 +43,6 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'dashboard.apps.DashboardConfig',
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -85,29 +75,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
 DATABASES = {
-    "local": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    },
-    "production": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": DB_NAME,
-        "USER": DB_USER,
-        "PASSWORD": DB_PASSWORD,
-        "HOST": DB_HOST,
-        "PORT": DB_PORT,
-        "TEST": {
-            "MIRROR": "default",
-        },
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get('POSTGRES_HOST', 'ec2-54-73-233-214.eu-west-1.compute.amazonaws.com'),
+        'NAME': os.environ.get('POSTGRES_DB', 'd2ilnud8pdfutb'),
+        'USER': os.environ.get('POSTGRES_USER', 'qvkgikyetbohqs'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD',
+                                   'de7c724105dd7fa73918e6e1404e480c27b571acf78f4a5490ea86fea7bc2e20'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+    }
 }
-DATABASES["default"] = DATABASES["local"]
+
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 AUTH_USER_MODEL = 'accounts.User'
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -127,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -139,10 +126,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 # directory that we want to store uploaded files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -153,11 +138,9 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = 'accounts:user_login'
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

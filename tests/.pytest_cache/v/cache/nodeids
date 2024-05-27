@@ -1,0 +1,4 @@
+[
+  "test_manage.py::test_manage_py_help",
+  "test_views.py::test_user_login_view_get"
+]

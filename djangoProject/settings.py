@@ -68,6 +68,12 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default='postgres://qvkgikyetbohqs:de7c724105dd7fa73918e6e1404e480c27b571acf78f4a5490ea86fea7bc2e20@ec2-54-73-233-214.eu-west-1.compute.amazonaws.com:5432/d2ilnud8pdfutb')
 }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {

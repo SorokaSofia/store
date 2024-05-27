@@ -8,7 +8,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-sve4v_b9xsvl=clkwx82l2^4tz+0yw3)il)-&qaalsrn57sg4e'
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [
     'djangoprojec-5b10cbb61607.herokuapp.com',

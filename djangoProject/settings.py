@@ -30,7 +30,7 @@ DB_HOST = os.environ.get('DB_HOST')
 DB_PORT = os.environ.get('DB_PORT')
 ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOST_HEROKU"), "*"]
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 

@@ -106,9 +106,9 @@ else:
         'HOST': DB_HOST,
         'PORT': DB_PORT,
     }
-    import dj_database.url
+    import dj_database_url
     DATABASE_URL = os.environ.get('DATABASE_URL')
-    db_config = dj_database.dj_database_url.config(default=DATABASE_URL, conn_max_age=600, conn_health_check=True)
+    db_config = dj_database_url.config(default=DATABASE_URL, conn_max_age=600, conn_health_checks=True)
     DATABASES['default'].update(db_config)
 AUTH_USER_MODEL = 'accounts.User'
 # Password validation

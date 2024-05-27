@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0334de3-e5d3-4ac8-a46f-bfd6521c6f53" name="Changes" comment="tests">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
       <workItem from="1716492869819" duration="5098000" />
       <workItem from="1716499231209" duration="8418000" />
       <workItem from="1716818244357" duration="4350000" />
-      <workItem from="1716822679593" duration="4797000" />
+      <workItem from="1716822679593" duration="6543000" />
     </task>
     <task id="LOCAL-00001" summary="create djangoProject">
       <option name="closed" value="true" />
@@ -328,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716827626505</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="tests">
+      <option name="closed" value="true" />
+      <created>1716827897540</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1716827897540</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +366,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/store$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716827662236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/store$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716829627531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

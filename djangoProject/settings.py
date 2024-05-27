@@ -28,11 +28,11 @@ DB_USER = os.environ.get('DB_USER')
 DB_PASSWORD = os.environ.get('DB_PASSWORD')
 DB_HOST = os.environ.get('DB_HOST')
 DB_PORT = os.environ.get('DB_PORT')
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split('*')
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOST_HEROKU"), "*"]
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [ALLOWED_HOSTS]
+
 
 
 # Application definition

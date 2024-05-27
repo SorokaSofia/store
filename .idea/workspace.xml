@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0334de3-e5d3-4ac8-a46f-bfd6521c6f53" name="Changes" comment="tests" />
+    <list default="true" id="a0334de3-e5d3-4ac8-a46f-bfd6521c6f53" name="Changes" comment="tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +140,7 @@
       <workItem from="1716492869819" duration="5098000" />
       <workItem from="1716499231209" duration="8418000" />
       <workItem from="1716818244357" duration="4350000" />
-      <workItem from="1716822679593" duration="3503000" />
+      <workItem from="1716822679593" duration="4527000" />
     </task>
     <task id="LOCAL-00001" summary="create djangoProject">
       <option name="closed" value="true" />
@@ -345,6 +348,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/store$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716826375052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/store$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716827068429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

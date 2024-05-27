@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import dj_database_url
+
 
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,12 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DB_NAME = os.environ.get('DB_NAME')
-DB_USER = os.environ.get('DB_USER')
-DB_PASSWORD = os.environ.get('DB_PASSWORD')
-DB_HOST = os.environ.get('DB_HOST')
-DB_PORT = os.environ.get('DB_PORT')
-ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOST_HEROKU"), "*"]
+
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://qvkgikyetbohqs:de7c724105dd7fa73918e6e1404e480c27b571acf78f4a5490ea86fea7bc2e20@ec2-54-73-233-214.eu-west-1.compute.amazonaws.com:5432/d2ilnud8pdfutb')
+}
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 

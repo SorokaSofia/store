@@ -14,7 +14,7 @@ ALLOWED_HOSTS = [
     'djangoprojec-5b10cbb61607.herokuapp.com',
     'storeproject-9f1f2dcc5feb.herokuapp.com',
     'localhost',
-    '127.0.0.1',
+    '127.0.0.1'
 ]
 
 
